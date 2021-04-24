@@ -120,3 +120,105 @@
     flex-direction: column;
   }
 }
+
+.grid {
+  height: 600px;
+  width: 600px;
+
+  display: grid;
+  grid-template-rows: repeat(auto-fill, auto);
+
+  gap: 0px;
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.gridRow {
+  width: 100%;
+  height: 100%;
+
+  width: 600px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  gap: 0px;
+}
+
+.gridElement {
+  height: 100%;
+  width: 100%;
+
+  background-color: black;
+  border: 1px solid black;
+
+  animation: loadIn .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.gridWalkable {
+  height: 100%;
+  width: 100%;
+
+  background-color: white;
+  border: 1px solid rgba(175, 194, 197, 0.8);
+}
+
+.coloured {
+  background-color: #fffe6a;
+  border: 1px solid rgba(175, 194, 197, 0.8);
+
+  width: 100%;
+  height: 100%;
+}
+
+.startNode {
+  background-color: rgb(83, 173, 209);
+  border: 1px solid rgba(175, 194, 197, 0.8);
+
+  width: 100%;
+  height: 100%;
+
+  animation: loadIn .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes loadIn {
+  0% {
+    transform: scale3d(0, 0, 0);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bodyFit {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+}
+
+.inputFields h3 { 
+  opacity: .6;
+  text-transform: uppercase;
+
+  color: rgba(175, 194, 197, 0.8);
+
+  font-size: 1rem;
+  margin: 0;
+}
+
+.inputFields input {
+  padding: .8rem 1rem;
+
+  border: 2px solid rgba(175, 194, 197, 0.8);
+  border-radius: 5px;
+  color: rgba(175, 194, 197, 1);
+  font-weight: 600;
+
+  opacity: 1;
+}
+
+.inputFields button {
+
+}
